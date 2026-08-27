@@ -1,0 +1,287 @@
+/* === RESET GENERAL === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f4f8;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; height: auto; }
+
+/* === ENCABEZADO === */
+header {
+    background: linear-gradient(135deg, #1976d2, #1565c0);
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo h1 { font-size: 1.5rem; font-weight: 700; }
+
+nav ul { display: flex; gap: 2rem; flex-wrap: wrap; }
+
+nav a {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover { background: rgba(255,255,255,0.2); }
+
+/* === BOTONES === */
+.btn {
+    display: inline-block;
+    background: #ff6f00;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: #e65100;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 111, 0, 0.3);
+}
+
+/* === BANNER === */
+.banner {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 2.5rem;
+    border-radius: 15px;
+    max-width: 500px;
+}
+
+.banner-texto h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+.banner-texto p { font-size: 1.2rem; margin-bottom: 1.5rem; }
+
+/* === CONTENEDORES GENERALES === */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 5%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1565c0;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #ff6f00;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.bienvenida, .subtitulo {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 3rem;
+}
+
+/* === GRID DE SERVICIOS === */
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(25, 118, 210, 0.15);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.tarjeta h3 {
+    font-size: 1.3rem;
+    color: #1565c0;
+    padding: 1.2rem 1.5rem 0.5rem;
+}
+
+.tarjeta p {
+    padding: 0 1.5rem 1rem;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.precio {
+    display: block;
+    padding: 0 1.5rem 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ff6f00;
+}
+
+.tarjeta .btn { margin: 0 1.5rem 1.5rem; width: calc(100% - 3rem); }
+
+/* === NOSOTROS === */
+.nosotros .historia, .nosotros .valores {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.nosotros h3 {
+    color: #1565c0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.mision-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.columna {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.valores ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+/* === CONTACTO === */
+.contenedor-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.info-contacto, .formulario-contacto {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.info-contacto p { margin: 1rem 0; font-size: 1.05rem; }
+
+form label {
+    display: block;
+    margin: 1rem 0 0.3rem;
+    font-weight: 600;
+    color: #1565c0;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #bbdefb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #1976d2;
+}
+
+form .btn { margin-top: 1.5rem; width: 100%; }
+
+.mapa { text-align: center; margin-top: 3rem; }
+.mapa img { border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+/* === PIE DE PÁGINA === */
+footer {
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+/* === RESPONSIVE ✅ === */
+@media (max-width: 900px) {
+    header { flex-direction: column; gap: 1rem; }
+    .banner-texto { left: 5%; right: 5%; max-width: 100%; }
+    .mision-vision, .contenedor-contacto { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    nav ul { gap: 0.5rem; justify-content: center; }
+    nav a { padding: 0.4rem 0.7rem; font-size: 0.9rem; }
+    .banner-texto h2 { font-size: 1.8rem; }
+    .grid-servicios { grid-template-columns: 1fr; }
+    h2 { font-size: 1.5rem; }
+}
